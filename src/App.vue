@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-    <div>
+    <div class="container-fluid">
         <div v-if="loaded && list.length === 0" class="pt-5 text-center">
             <h2>JSON files not found</h2>
             <h3>Please put all your .json files in the "json/" folder and refresh the page.</h3>
@@ -43,7 +43,9 @@ export default {
             <div class="col-4">
                 <div class="list-group">
                     <a class="list-group-item list-group-item-action" :class="{active: item.uid === activeItem.uid}" href="#" v-for="item in list" :key="item.uid" @click="itemClick(item)">
-                        <img :src="item.profilePic" class="pic me-3" />
+                        <div class="pic-container me-3">
+                            <img :src="item.profilePic" class="pic" />
+                        </div>
                         {{ item.name }}
                     </a>
                 </div>
@@ -81,8 +83,14 @@ export default {
         overflow: scroll;
     }
 
+    .pic-container {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+    }
+
     .pic {
-        width: 50px;
+        width: 100%;
     }
 
     h2 {
