@@ -1,0 +1,23 @@
+{
+    "name": "icq-contact-list-viewer",
+    "version": "1.0.0",
+    "scripts": {
+        "dev-vite": "vite",
+        "dev-server": "cross-env NODE_ENV=development node server.js",
+        "build": "npm run build-vite && npm run build-server && npm run build-exe",
+        "build-vite": "vite build",
+        "build-server": "esbuild server.js --bundle --platform=node --outfile=server-bundle.js",
+        "build-exe": "node --experimental-sea-config sea-config.json && node -e \"require('fs').copyFileSync(process.execPath, 'icq-contact-list-viewer.exe')\" && npx postject icq-contact-list-viewer.exe NODE_SEA_BLOB sea-prep.blob ` --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2"
+    },
+    "dependencies": {
+        "express": "~4.19.2"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "~5.0.5",
+        "bootstrap": "~5.3.3",
+        "cross-env": "~7.0.3",
+        "esbuild": "~0.21.4",
+        "vite": "~5.2.13",
+        "vue": "~3.4.27"
+    }
+}

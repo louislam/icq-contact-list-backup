@@ -1,0 +1,9 @@
+{
+    "main": "server-bundle.js",
+    "output": "sea-prep.blob",
+    "assets": {
+        "index.html": "dist/index.html",
+        "index.css": "dist/index.css",
+        "index.js": "dist/index.js"
+    }
+}
