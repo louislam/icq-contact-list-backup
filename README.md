@@ -41,7 +41,7 @@ ICQ will shut down on June 26, 2024. This script will not work after that date.
 
     <img src="https://github.com/louislam/icq-contact-list-backup/assets/1336778/a1729a3a-2a0b-4012-81fc-660fdc90c099" width=200>
 
-1. Do this one by one 
+1. One json file contains only one contact's info. So you need to do this one by one on all your contacts until finish.
 
 ## How to View
 
